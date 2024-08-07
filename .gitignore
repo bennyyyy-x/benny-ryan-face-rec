@@ -1,0 +1,12 @@
+bin/
+include/
+lib/
+share/
+pyvenv.cfg
+raw_benny/
+raw_ryan/
+benny_faces/
+other_faces/
+raw_images/
+ryan_faces/
+.DS_Store
