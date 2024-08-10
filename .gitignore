@@ -10,3 +10,7 @@ other_faces/
 raw_images/
 ryan_faces/
 .DS_Store
+*/.DS_Store
+augmented_ryan
+my_logs/
+model*
