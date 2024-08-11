@@ -1,0 +1,25 @@
+{
+  "name": "benny-ryan-face-rec",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennyyyy-x/benny-ryan-face-rec.git"
+  },
+  "author": "Benny Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bennyyyy-x/benny-ryan-face-rec/issues"
+  },
+  "homepage": "https://github.com/bennyyyy-x/benny-ryan-face-rec#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1"
+  },
+  "type": "module"
+}
