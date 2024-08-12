@@ -18,12 +18,15 @@ def main():
     image_path = sys.argv[1]
     print(f"Image path: {image_path}")
 
-    if image_path is None or not (image_path.lower().endswith('.heic') or
-                                  image_path.lower().endswith('.heif') or
-                                  image_path.lower().endswith('.jpg') or
-                                  image_path.lower().endswith('.jpeg') or
-                                  image_path.lower().endswith('.png')):
-        print(-1)
+    if os.path.exists(BENNY_IMAGE_PATH):
+        os.remove(BENNY_IMAGE_PATH)
+    if os.path.exists(RYAN_IMAGE_PATH):
+        os.remove(RYAN_IMAGE_PATH)
+    if not os.path.exists(IMAGE_DIR_PATH):
+        os.makedirs(IMAGE_DIR_PATH)
+
+    ext = os.path.splitext(image_path)[1]
+    if image_path is None or not ext.lower() in Image.registered_extensions():
         return
 
     image = Image.open(image_path)
@@ -31,7 +34,6 @@ def main():
     image_array = np.array(image)
     faces = detector.detect_faces(image_array)
     if len(faces) == 0:
-        print('0\n0')
         return
 
     model: keras.models.Model = keras.models.load_model(MODEL_PATH)
@@ -40,13 +42,6 @@ def main():
     benny_prob = 0
     ryan_face = None
     ryan_prob = 0
-
-    if os.path.exists(BENNY_IMAGE_PATH):
-        os.remove(BENNY_IMAGE_PATH)
-    if os.path.exists(RYAN_IMAGE_PATH):
-        os.remove(RYAN_IMAGE_PATH)
-    if not os.path.exists(IMAGE_DIR_PATH):
-        os.makedirs(IMAGE_DIR_PATH)
 
     for face in faces:
         x, y, w, h = face['box']

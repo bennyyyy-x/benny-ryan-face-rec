@@ -1,0 +1,32 @@
+#image-container {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 10 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#original-image {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#original-image img {
+    width: 100%;
+    height: auto;
+}
+
+* {
+    text-align: center;
+}

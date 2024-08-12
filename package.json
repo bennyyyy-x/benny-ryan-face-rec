@@ -1,9 +1,9 @@
 {
   "name": "benny-ryan-face-rec",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon --watch src --watch public src/index.js",
+    "dev": "nodemon --watch src --watch public --ext js,html,css,py src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "express-fileupload": "^1.5.1",
+    "heic2any": "^0.0.4",
     "nodemon": "^3.1.4"
   },
   "type": "module"
