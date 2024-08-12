@@ -4,10 +4,19 @@ This is a simple face recognition tool that uses `MTCNN` to detect and crop face
 
 ## Installation
 
-This tool requires `Python` and `Node.js` to run. To install the dependencies, run the following commands:
+This tool requires `Python` and `Node.js` to run. To install the dependencies, run the following commands.
+
+For Windows/Linux, run:
 
 ```bash
 pip install -r requirements.txt
+npm install
+```
+
+For MacOS, run:
+
+```bash
+pip install -r requirements-macos.txt
 npm install
 ```
 
@@ -18,5 +27,7 @@ To use the tool, simply run the following command:
 ```bash
 npm run dev
 ```
+
+Then you can access the webpage at `localhost:8080`.
 
 ![Sample Webpage](./assets/image.png)
