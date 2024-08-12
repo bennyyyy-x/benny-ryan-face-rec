@@ -1,0 +1,5 @@
+{
+  "bennyImagePath": "images/benny.jpg",
+  "ryanImagePath": "images/ryan.jpg",
+  "pythonPath": "detect_faces.py"
+}

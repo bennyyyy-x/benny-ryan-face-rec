@@ -1,5 +1,5 @@
-const form = document.getElementById('upload-form')
-const output = document.getElementById('output')
+const form = document.getElementById('upload-form');
+const output = document.getElementById('output');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
