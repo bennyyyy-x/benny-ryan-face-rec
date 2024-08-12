@@ -6,6 +6,7 @@ import { run } from './detectFaces.js';
 import fs from 'fs';
 import config from '../config/config.json' with { type: 'json' };
 
+const port = process.env.PORT || 8080;
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 const app = express();
@@ -81,4 +82,4 @@ app.get('/ryan', (req, res) => {
     });
 });
 
-server.listen(8080, () => console.log('Server started on port 8080'));
+server.listen(port, () => console.log('Server started on port 8080'));
