@@ -59,7 +59,7 @@ def main():
         cropped_resized = cropped.resize((IMAGE_WIDTH, IMAGE_HEIGHT))
         if cropped_resized.mode != "RGB":
             cropped_resized = cropped_resized.convert("RGB")
-        cropped_array = np.array(cropped_resized) / 255.0
+        cropped_array = np.array(cropped_resized) / 255.0 # Normalize the image
         cropped_array = np.expand_dims(cropped_array, axis=0)
         print(f"cropped_array.shape is {cropped_array.shape}")
 
@@ -75,9 +75,9 @@ def main():
                 ryan_face = cropped
                 ryan_prob = score[0, index]
 
-    if benny_face is not None:
+    if benny_face is not None and benny_prob >= FACE_CONFIDENCE:
         benny_face.save(BENNY_IMAGE_PATH)
-    if ryan_face is not None:
+    if ryan_face is not None and ryan_prob >= FACE_CONFIDENCE:
         ryan_face.save(RYAN_IMAGE_PATH)
 
 if __name__ == '__main__':
