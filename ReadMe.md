@@ -11,6 +11,12 @@ pip install -r requirements.txt
 npm install
 ```
 
+## Usage
 
+To use the tool, simply run the following command:
+
+```bash
+npm run dev
+```
 
 ![Sample Webpage](./assets/image.png)

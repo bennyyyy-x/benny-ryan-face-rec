@@ -18,3 +18,4 @@ uploads/*
 uploads/shanghai.JPG
 */__pycache__
 images/*
+.vercelignore
