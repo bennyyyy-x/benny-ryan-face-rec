@@ -14,3 +14,7 @@ ryan_faces/
 augmented_ryan
 my_logs/
 node_modules/
+uploads/*
+uploads/shanghai.JPG
+*/__pycache__
+images/*

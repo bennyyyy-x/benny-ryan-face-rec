@@ -1,0 +1,8 @@
+MODEL_PATH = 'models/model1'
+IMAGE_HEIGHT = 256
+IMAGE_WIDTH = 256
+BENNY_IMAGE_PATH = 'images/benny.jpg'
+RYAN_IMAGE_PATH = 'images/ryan.jpg'
+IMAGE_DIR_PATH = 'images/'
+MTCNN_CONFIDENCE = 0.9
+FACE_CONFIDENCE = 0.8
