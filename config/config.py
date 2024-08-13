@@ -1,6 +1,4 @@
-import os
-
-MODEL_PATH = 'models/model1'
+MODEL_PATH = 'models/model2'
 IMAGE_HEIGHT = 256
 IMAGE_WIDTH = 256
 IMAGE_DIR_PATH = 'images/'
