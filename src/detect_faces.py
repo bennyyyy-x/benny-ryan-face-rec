@@ -25,8 +25,7 @@ def main():
     if not os.path.exists(IMAGE_DIR_PATH):
         os.makedirs(IMAGE_DIR_PATH)
 
-    ext = os.path.splitext(image_path)[1]
-    if image_path is None or not ext.lower() in Image.registered_extensions():
+    if image_path is None or not os.path.splitext(image_path)[1].lower() in Image.registered_extensions():
         return
 
     image = Image.open(image_path)
