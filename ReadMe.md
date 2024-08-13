@@ -9,6 +9,10 @@ This tool requires `Python`, `Node.js`, `pip`, and `npm` to run. If you don't ha
 - [Download Python](https://www.python.org/downloads/)
 - [Download Node.js](https://nodejs.org/)
 
+## Why This Project?
+
+Me, Benny, and my cousin, Ryan, looks extremely similar with each other, especially our faces at a young age. Sometime when I am using Iphone's Photo Album app, I can find my photos identified as him, and vice versa. I realized, maybe I could do better than that. Therefore, I trained a model that can recognize our faces, and built a simple web interface to test it.
+
 ## Installation
 
 To install the dependencies, run the following commands.
