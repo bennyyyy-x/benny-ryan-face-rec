@@ -58,10 +58,10 @@ app.get('/benny', (req, res) => {
     const imagePath = path.join(__dirname, '..', config.bennyImagePath)
     res.sendFile(imagePath, (err) => {
         if (err) {
-            console.error('Error downloading file:', err);
-            res.status(500).send('Error downloading the file.');
+            console.error('Error downloading Benny\'s face image:', err);
+            res.status(500).send('Error downloading Benny\'s face image.');
         } else {
-            console.log('File download started.');
+            console.log('Benny\'s face image download started.');
         }
     });
 });
@@ -74,10 +74,10 @@ app.get('/ryan', (req, res) => {
     const imagePath = path.join(__dirname, '..', config.ryanImagePath)
     res.sendFile(imagePath, (err) => {
         if (err) {
-            console.error('Error downloading file:', err);
-            res.status(500).send('Error downloading the file.');
+            console.error('Error downloading Ryan\'s face image:', err);
+            res.status(500).send('Error downloading Ryan\'s face image.');
         } else {
-            console.log('File download started.');
+            console.log('Ryan\'s face image download started.');
         }
     });
 });

@@ -11,6 +11,7 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 from config.config import MODEL_PATH, IMAGE_HEIGHT, IMAGE_WIDTH, BENNY_IMAGE_PATH, RYAN_IMAGE_PATH, IMAGE_DIR_PATH, MTCNN_CONFIDENCE, FACE_CONFIDENCE
+import time
 
 pillow_heif.register_heif_opener()
 
@@ -35,7 +36,11 @@ def main():
     if len(faces) == 0:
         return
 
+    print("Loading model...")
+    start_time = time.time()
     model: keras.models.Model = keras.models.load_model(MODEL_PATH)
+    end_time = time.time()
+    print(f"Loaded model in {end_time - start_time} seconds")
 
     benny_face = None
     benny_prob = 0
