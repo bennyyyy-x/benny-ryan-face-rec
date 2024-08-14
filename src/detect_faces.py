@@ -80,5 +80,8 @@ def main():
     if ryan_face is not None and ryan_prob >= FACE_CONFIDENCE:
         ryan_face.save(RYAN_IMAGE_PATH)
 
+    if os.path.exists(image_path):
+        os.remove(image_path)
+
 if __name__ == '__main__':
     main()

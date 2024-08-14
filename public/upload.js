@@ -18,19 +18,15 @@ form.addEventListener('submit', (event) => {
             toType: 'image/jpeg',
         }).then(convertedBlob => {
             const url = URL.createObjectURL(convertedBlob);
-            originalImage.innerHTML = `
-                <p>Original Image:</p>
-                <img src="${url}" alt="Original Image" id="original-image">
-            `;
+            originalImage.innerHTML = `<p>Original Image:</p>
+                                       <img src="${url}" alt="Original Image" id="original-image">`;
         }).catch((error) => {
             console.error('Error converting HEIC file:', error);
         });
     } else if (file) {
         const originalUrl = URL.createObjectURL(file);
-        originalImage.innerHTML = `
-            <p>Original Image:</p>
-            <img src="${originalUrl}" alt="Original Image" id="original-image">
-        `;
+        originalImage.innerHTML = `<p>Original Image:</p>
+                                   <img src="${originalUrl}" alt="Original Image" id="original-image">`;
     }
 
     const formData = new FormData(form);
