@@ -30,6 +30,10 @@ def main():
         return
 
     image = Image.open(image_path)
+
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+
     detector = MTCNN()
     image_array = np.array(image)
     faces = detector.detect_faces(image_array)
@@ -56,8 +60,6 @@ def main():
 
         cropped = image.crop((x, y, x + w, y + h))
         cropped_resized = cropped.resize((IMAGE_WIDTH, IMAGE_HEIGHT))
-        if cropped_resized.mode != "RGB":
-            cropped_resized = cropped_resized.convert("RGB")
         cropped_array = np.array(cropped_resized) / 255.0 # Normalize the image
         cropped_array = np.expand_dims(cropped_array, axis=0)
         print(f"cropped_array.shape is {cropped_array.shape}")
