@@ -7,7 +7,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from mtcnn.mtcnn import MTCNN
 from PIL import Image
 import pillow_heif
-import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 from config.config import MODEL_PATH, IMAGE_HEIGHT, IMAGE_WIDTH, BENNY_IMAGE_PATH, RYAN_IMAGE_PATH, IMAGE_DIR_PATH, MTCNN_CONFIDENCE, FACE_CONFIDENCE
